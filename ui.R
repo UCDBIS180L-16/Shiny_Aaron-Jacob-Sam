@@ -16,6 +16,21 @@ shinyUI(fluidPage(
   
   # Some Directions and Information
   helpText("<insert directions text here>.",
-           "This application will <insert description what the application does text here>.")
+           "This application will <insert description what the application does text here>."),
   
+  # Sidebar with a radio box to input which trait will be plotted
+  sidebarLayout(
+    sidebarPanel(
+      radioButtons("trait", #the input variable that the value will go into
+                   "Choose a trait to display:",
+                   c("Sepal.Length",
+                     "Sepal.Width",
+                     "Petal.Length",
+                     "Petal.Width")
+      )),
+    
+    # Show a plot of the generated distribution
+    mainPanel(plotOutput("boxPlot")
+    )
+  )
 ))

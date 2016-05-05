@@ -8,12 +8,16 @@
 #
 
 library(shiny)
-library(ggplot2) #load in ggplot
-#library(<insert dataset>)
+library(ggplot2)
+#library(<insert data>)
 #load(<insert dataset>)
 
-# Define server logic required to draw a histogram
+library(shiny)
+library(ggplot2)
+
+# Define server logic required to draw a boxplot
 shinyServer(function(input, output) {
+<<<<<<< HEAD
    
   output$distPlot <- renderPlot({
     
@@ -27,6 +31,33 @@ shinyServer(function(input, output) {
                           )
                )
     pl+geom_point()
-  })
+=======
   
+  # Expression that generates a boxplot. The expression is
+  # wrapped in a call to renderPlot to indicate that:
+  #
+  #  1) It is "reactive" and therefore should re-execute automatically
+  #     when inputs change
+  #  2) Its output type is a plot
+  
+  output$boxPlot <- renderPlot({
+    
+    # set up the plot
+    pl <- ggplot(data = iris,
+                 #Use aes_string below so that input$trait is interpreted
+                 #correctly.  The other variables need to be quoted
+                 aes_string(x="Species",
+                            y=input$trait,
+                            fill="Species"
+                 )
+    )
+    
+    # draw the boxplot for the specified trait
+    pl + geom_boxplot()
+>>>>>>> 7d9247a27acea89cbd31b59fba4e2e933a7fecda
+  })
 })
+
+
+#shinyapps::deployApp('/home/bis180l_local/Shinyapps/Shiny_Aaron-Jacob-Sam') 
+#to deploy app later

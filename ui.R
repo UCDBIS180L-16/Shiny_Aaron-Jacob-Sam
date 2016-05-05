@@ -12,7 +12,7 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("(Rice Scatter Plot"),
+  titlePanel("Rice Scatter Plot"),
   
   # Some Directions and Information
   helpText("Select variables to compare.",
@@ -62,7 +62,7 @@ shinyUI(fluidPage(
                    c("Seed.color",
                      "Pericarp.color",
                      "Region"))
-      )),
+      ),
     
     
     
@@ -70,4 +70,4 @@ shinyUI(fluidPage(
     mainPanel(plotOutput("distPlot")
     )
 )
-)
+))

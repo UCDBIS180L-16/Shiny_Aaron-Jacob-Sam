@@ -8,6 +8,9 @@
 #
 
 library(shiny)
+library(ggplot2) #load in ggplot
+#library(<insert dataset>)
+#load(<insert dataset>)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {

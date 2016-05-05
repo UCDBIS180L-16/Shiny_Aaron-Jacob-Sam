@@ -12,10 +12,11 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Rice Scatter Plot"),
+  titlePanel("Rice Phenotype Scatter Plot"),
   
   # Some Directions and Information
-  helpText("Select variables to compare.",
+  helpText("Select phenotypic traits to compare.",
+           "The data was gathered ",
            "This application will create a scatter plot with options for X and Y axes and color."),
   
   # Sidebar with a radio box to input which traits will be plotted
@@ -62,7 +63,8 @@ shinyUI(fluidPage(
                    c("Seed.color",
                      "Pericarp.color",
                      "Region",
-                     "popID"))
+                     "popID",
+                     "NULL"))
       ),
     
     

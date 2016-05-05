@@ -12,25 +12,41 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("(<insert application title here>"),
+  titlePanel("(Rice Scatter Plot"),
   
   # Some Directions and Information
-  helpText("<insert directions text here>.",
-           "This application will <insert description what the application does text here>."),
+  helpText("Select variables to compare.",
+           "This application will create a scatter plot with options for X and Y axes and color."),
   
-  # Sidebar with a radio box to input which trait will be plotted
+  # Sidebar with a radio box to input which traits will be plotted
   sidebarLayout(
     sidebarPanel(
-      radioButtons("trait", #the input variable that the value will go into
-                   "Choose a trait to display:",
+      radioButtons("Variable1", 
+                   "Choose a variable to display on the X axis:",
                    c("Sepal.Length",
                      "Sepal.Width",
                      "Petal.Length",
-                     "Petal.Width")
-      )),
+                     "Petal.Width")),
+    sidebarPanel(
+      radioButtons("Variable2", 
+                    "Choose a variable to display on the Y axis:",
+                    c("Sepal.Length",
+                    "Sepal.Width",
+                    "Petal.Length",
+                    "Petal.Width")),
+      radioButtons("Color", 
+                   "Choose a trait to display by color:",
+                   c("Sepal.Length",
+                   "Sepal.Width",
+                   "Petal.Length",
+                   "Petal.Width")))
+      )
+      ),
+                   
+      
     
     # Show a plot of the generated distribution
-    mainPanel(plotOutput("boxPlot")
+    mainPanel(plotOutput("distPlot")
     )
-  )
-))
+)
+)

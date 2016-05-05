@@ -9,8 +9,8 @@
 
 library(shiny)
 library(ggplot2)
-#library(<insert data>)
-#load(<insert dataset>)
+
+load("data_from_SNP_lab.Rdata")
 
 
 data.pheno.mds <- merge(geno.mds,data.pheno,by="row.names",all=T)
@@ -26,8 +26,7 @@ shinyServer(function(input, output) {
     pl<-ggplot(data=data.pheno.mds,
                aes_string(x=input$Variable1,
                           y=input$Variable2,
-                          color=input$Color,
-                          shape="popID"
+                          color=input$Color
                           )
                )
     pl+geom_point()

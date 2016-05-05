@@ -61,7 +61,8 @@ shinyUI(fluidPage(
                    "Choose a trait to display by color:",
                    c("Seed.color",
                      "Pericarp.color",
-                     "Region"))
+                     "Region",
+                     "popID"))
       ),
     
     

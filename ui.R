@@ -12,10 +12,10 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel(""),
+  titlePanel("(<insert application title here>"),
   
   # Some Directions and Information
-  helpText("Please.<insert text here>.",
-           "This application will <insert text here>.")
+  helpText("<insert directions text here>.",
+           "This application will <insert description what the application does text here>.")
   
 ))

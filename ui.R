@@ -16,6 +16,6 @@ shinyUI(fluidPage(
   
   # Some Directions and Information
   helpText("Please.<insert text here>.",
-           "This application will <insert text here>."),
+           "This application will <insert text here>.")
   
 ))

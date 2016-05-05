@@ -23,29 +23,50 @@ shinyUI(fluidPage(
     sidebarPanel(
       radioButtons("Variable1", 
                    "Choose a variable to display on the X axis:",
-                   c("Sepal.Length",
-                     "Sepal.Width",
-                     "Petal.Length",
-                     "Petal.Width")),
-    sidebarPanel(
+                   c("Alu.Tol",
+                     "Flag.leaf.length",
+                     "Flag.leaf.width",
+                     "Panicle.number.per.plant",
+                     "Plant.height",
+                     "Panicle.length",
+                     "Primary.panicle.branch.number",
+                     "Seed.number.per.panicle",
+                     "Florets.per.panicle",
+                     "Panicle.fertility",
+                     "Seed.length",
+                     "Seed.width",
+                     "Seed.volume",
+                     "Seed.surface.area",
+                     "Amylose.content",
+                     "Protein.content")),
       radioButtons("Variable2", 
                     "Choose a variable to display on the Y axis:",
-                    c("Sepal.Length",
-                    "Sepal.Width",
-                    "Petal.Length",
-                    "Petal.Width")),
+                    c("Alu.Tol",
+                      "Flag.leaf.length",
+                      "Flag.leaf.width",
+                      "Panicle.number.per.plant",
+                      "Plant.height",
+                      "Panicle.length",
+                      "Primary.panicle.branch.number",
+                      "Seed.number.per.panicle",
+                      "Florets.per.panicle",
+                      "Panicle.fertility",
+                      "Seed.length",
+                      "Seed.width",
+                      "Seed.volume",
+                      "Seed.surface.area",
+                      "Amylose.content",
+                      "Protein.content")),
       radioButtons("Color", 
                    "Choose a trait to display by color:",
-                   c("Sepal.Length",
-                   "Sepal.Width",
-                   "Petal.Length",
-                   "Petal.Width")))
-      )
-      ),
-                   
-      
+                   c("Seed.color",
+                     "Pericarp.color",
+                     "Region"))
+      )),
     
-    # Show a plot of the generated distribution
+    
+    
+    #Show a plot of the generated distribution
     mainPanel(plotOutput("distPlot")
     )
 )

@@ -12,8 +12,8 @@ library(ggplot2)
 #library(<insert data>)
 #load(<insert dataset>)
 
-library(shiny)
-library(ggplot2)
+
+data.pheno.mds <- merge(geno.mds,data.pheno,by="row.names",all=T)
 
 # Define server logic required to draw a boxplot
 shinyServer(function(input, output) {
@@ -27,7 +27,7 @@ shinyServer(function(input, output) {
                aes_string(x=input$Variable1,
                           y=input$Variable2,
                           color=input$Color,
-                          shape=popID
+                          shape="popID"
                           )
                )
     pl+geom_point()

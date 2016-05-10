@@ -60,11 +60,11 @@ shinyUI(fluidPage(
                       "Protein.content")),
       radioButtons("Color", 
                    "Choose a trait to display by color:",
-                   c("Seed.color",
+                   c("NULL",
+                     "Seed.color",
                      "Pericarp.color",
                      "Region",
-                     "popID",
-                     "NULL"))
+                     "popID"))
       ),
     
     

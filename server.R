@@ -37,3 +37,5 @@ shinyServer(function(input, output) {
 
 #shinyapps::deployApp('/home/bis180l_local/Shinyapps/Shiny_Aaron-Jacob-Sam') 
 #to deploy app later
+#link to app
+#https://samomics.shinyapps.io/Shiny_Aaron-Jacob-Sam/
